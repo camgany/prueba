@@ -1,0 +1,42 @@
+@use '../../scss/abstracts/' as *;
+
+.box {
+    padding: 80px 30px;
+    padding-bottom: 480px;
+    border-radius: $borderRadius;
+    height: 120px;
+    background-color: #cd2626;
+    box-shadow: rgb(87, 69, 44) 0px 8px 24px;
+
+    &-purple {
+        background-color: $purple;
+        color: $white;
+    }
+
+    &-fullheight {
+        height: calc(100% - $spacing);
+        @include tablet {
+            height: calc(100% - $mobileSpacing);
+        }
+    }
+}
+.box2 {
+    padding: 810px 30px;
+    padding-bottom: 80px;
+    border-radius: $borderRadius;
+    height: 20px;
+    background-color: #cd2626;
+    box-shadow: rgb(87, 69, 44) 0px 8px 24px;
+
+    &-purple {
+        background-color: $purple;
+        color: $white;
+    }
+
+    &-fullheight {
+        height: calc(100% - $spacing);
+        @include tablet {
+            height: calc(100% - $mobileSpacing);
+        }
+    }
+}

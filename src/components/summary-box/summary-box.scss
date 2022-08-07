@@ -1,0 +1,100 @@
+@use '../../scss/abstracts/' as *;
+
+.summary-box {
+    
+    @include flex(stretch, flex-start);
+    
+    &__img {
+        --size: 60px;
+        width: var(--size);
+        height: var(--size);
+        border-bottom: $borderRadius;
+        border-radius: 12px;
+        
+
+        img {
+            border-bottom: $borderRadius;
+            border-radius: 12px;
+        }
+        
+    }
+    &__info {
+        width: 80%;
+        height: 100%;
+        padding-left: 10%;
+        
+        @include flex(flex-start, space-between);
+        flex-direction: column;
+        &__name {
+            font-size: $fontSizeExtraLarge;
+            font-weight: bold;
+            line-height: 1.2;
+            padding-bottom: 10%;
+        }
+        &__title {
+            font-size: $fontSizeMedium;
+            font-weight: 700;
+            line-height: 1.2;
+            padding-bottom: 10%;
+            
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            
+        }
+        &__careers {
+            color:rgb(225, 204, 204);
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-left: 3%;
+            padding-right: 3%;
+            background-position: 10%;
+            background-color: rgb(138, 22, 22);
+            font-size: small;
+            font-weight: 700;
+            line-height: 1.2;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        &__value {
+            font-weight: 700;
+            font-size: $fontSizeLarge;
+            color: $black;
+        }
+        &__button {
+            @include flex(flex-start, center);
+        
+                background-color: $black;
+                color: rgb(218, 216, 216);
+                border-radius: 8px;
+                padding-left: 100px;
+                padding-right: 90px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-size: $fontSizeNormal;
+                font-weight: 700;
+                line-height: 1.2;
+                margin-bottom: 5px;
+                margin-top: 10px;
+    
+        }
+        
+    }
+}
+
+.summary-box2 {
+    @include flex(center, space-between);
+    flex-direction: column;
+    
+
+    &__title {
+        font-weight: 700;
+        font-size: $fontSizeMedium;
+    }
+
+    &__value {
+        font-size: $fontSizeLarge;
+        font-weight: 700;
+    }
+}
